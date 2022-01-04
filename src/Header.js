@@ -1,4 +1,4 @@
-import { Menu ,Search} from 'semantic-ui-react' 
+import { Menu} from 'semantic-ui-react' 
 import {Link} from 'react-router-dom'
 import React from 'react'
 import firebase from './utils/firebase'
@@ -6,12 +6,10 @@ import {useHistory} from 'react-router-dom'
 
 function Header({user}){
     const history=useHistory()
+
     return(
         <Menu>
             <Menu.Item as={Link} to="/posts">NoteHub</Menu.Item>
-            <Menu.Item>
-                <Search/>
-            </Menu.Item>
             <Menu.Menu position='right'>
                 {/* 判斷user是否登入，登出調用firebase內的signOut(會被useEffect監聽到轉至無user狀態)  */}
                 {user ? (<>
