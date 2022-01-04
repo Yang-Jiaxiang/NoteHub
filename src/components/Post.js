@@ -9,9 +9,9 @@ function Post({post}){
             <Item.Image src={post.imageUrl || 'https://react.semantic-ui.com/images/wireframe/image.png'}  />
             <Item.Content>
                 <Item.Meta>
-                    {post.author.photoURL ? <Image src={post.author.photoURL}/>:<Icon name='user circle'/>}
+                    {post.author.photoURL ? <Image src={post.author.photoURL} avatar wrapped/>:<Icon name='user circle'/>}&emsp;
                     {post.topic}-
-                    {post.author.displayname || '使用者'}
+                    {post.author.displayName || '使用者' }
                 </Item.Meta>
                 <Item.Header>{post.title}</Item.Header>
                 <Item.Description>{post.content}</Item.Description>

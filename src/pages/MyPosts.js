@@ -1,8 +1,7 @@
 import React from 'react'
-import {Grid,Item,Image,Icon,Container,Header} from 'semantic-ui-react'
+import {Item,Header} from 'semantic-ui-react'
 import firebase from '../utils/firebase'
 import "firebase/compat/firestore"
-import {Link} from 'react-router-dom'
 import Post from '../components/Post'
 
 function MyPosts(){

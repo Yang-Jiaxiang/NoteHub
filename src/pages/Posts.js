@@ -22,7 +22,7 @@ function Posts(){
                 setPosts(data)
             })
         }else{
-            firebase.firestore().collection('posts').get().then((collectionSnapshot)=>{
+            firebase.firestore().collection('posts').orderBy('createdAt', 'desc').get().then((collectionSnapshot)=>{
                 const data=collectionSnapshot.docs.map(docSnapshot=>{
                     //React需要ID，解構post傳入
                     const id=docSnapshot.id

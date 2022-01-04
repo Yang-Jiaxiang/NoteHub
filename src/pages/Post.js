@@ -1,7 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import {Container,Grid,Image,Header,Segment, Icon,Comment, Form} from 'semantic-ui-react'
-import Topics from '../components/Topics'
+import {Container,Image,Header,Segment, Icon,Comment, Form} from 'semantic-ui-react'
 import firebase from '../utils/firebase'
 import "firebase/compat/firestore"
 import "firebase/compat/auth"
@@ -114,7 +113,7 @@ function Post(){
         <>
         {/*使用者或名稱沒有的話就顯示Icon ||使用者*/}
         {post.author.photoURL ? (
-            <Image src={post.author.photoURL}/>
+            <Image src={post.author.photoURL} avatar wrapped/>
             ):(
                 <Icon name='user circle'/>
             )}
@@ -154,7 +153,7 @@ function Post(){
                 <Form.TextArea value={commentContent} onChange={(e)=>setCommentContent(e.target.value)}/>
                 <Form.Button onClick={onSubmit} loading={isLoading}>留言</Form.Button>
             </Form>
-            <Header>共{post.commentsCound}則留言</Header>
+            <Header>共{post.commentsCound||'0'}則留言</Header>
             {comments.map((comment)=>{
                 return(
                     <Comment>

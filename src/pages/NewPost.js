@@ -77,7 +77,7 @@ function NewPost(){
                 }).then(()=>{
                     //成功透過React.useHistory倒回至首頁
                     setIsLoading(false)
-                    history.push('/')
+                    history.push('/posts')
                 })
             })
         })
