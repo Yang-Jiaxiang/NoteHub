@@ -2,14 +2,10 @@ import React from 'react'
 import firebase from '../utils/firebase'
 import {Menu,Form,Container,Message,Icon} from 'semantic-ui-react'
 import {useHistory} from 'react-router-dom'
-import {getAuth, signInWithRedirect,signInWithPopup, GoogleAuthProvider} from 'firebase/auth'
+import GoogleLogin from '../utils/GoogleLogin'
 
 
 function Signin(){
-    //Google登入建構
-    const provider = new GoogleAuthProvider();
-    const auth = getAuth();
-
     //history跳轉畫面(為React跳轉function)
     const history =useHistory()
 
@@ -71,28 +67,6 @@ function Signin(){
         }
     }
 
-    function onSubmitApiRegister(){
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                // This gives you a Google Access Token. You can use it to access the Google API.
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
-                // The signed-in user info.
-                const user = result.user;
-                // ...
-            }).catch((error) => {
-                // Handle Errors here.
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // The email of the user's account used.
-                const email = error.email;
-                // The AuthCredential type that was used.
-                const credential = GoogleAuthProvider.credentialFromError(error);
-                // ...
-            });
-            signInWithRedirect(auth, provider);
-    }
-
     return(
         <>
             <Container>
@@ -116,7 +90,7 @@ function Signin(){
 
 
                 {/* 透過GOOGLE登入或註冊  */}
-                <Form style={{margin:'10px 0'}} onSubmit={onSubmitApiRegister}>
+                <Form style={{margin:'10px 0'}} onSubmit={GoogleLogin}>
                     <Form.Button loading={isLoading}>
                             <Icon name='google'/>
                             透過 GOOGLE {activeItem==='register' && '註冊'}{activeItem==='signin' && '登入'}

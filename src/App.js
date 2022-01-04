@@ -26,6 +26,7 @@ function App() {
     <BrowserRouter>
       <Header user={user}/>
       <Switch>
+      <Route path='/' exact><Redirect to='/posts'/></Route>
         <Route path='/posts'>
           <Container>
               <Grid>
