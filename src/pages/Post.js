@@ -134,6 +134,7 @@ function Post(){
         {/*筆記內容Quill*/}
         <Container>
             <ReactQuill
+                className='QuillInContainer'
                 value={post.Quill}
                 readOnly={true}
                 theme={"bubble"}

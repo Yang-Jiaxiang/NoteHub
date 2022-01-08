@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 import App from './App';
 import './css/Semantic-UI-CSS/semantic.min.css'
+import './css/Quill.css'
 
 ReactDOM.render(
     <App />,

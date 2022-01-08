@@ -33,7 +33,7 @@ function App() {
                   {/* Grid可以想像為Table Row代表直排、Column代表橫排(Column分為16等分，可用width切割)  */}
                   <Grid.Row>
                       <Grid.Column width={3}><Topics/></Grid.Column>
-                      <Grid.Column width={10}>
+                      <Grid.Column width={(window.screen.width)>'500'?'10':'13'}>
                           <Switch>
                             <Route path='/posts' exact><Posts/></Route>
                             <Route path='/posts/:postId' exact>{user ?<Post/>:<Redirect to='/signin'/>}</Route>
@@ -52,17 +52,18 @@ function App() {
                   {/* Grid可以想像為Table Row代表直排、Column代表橫排(Column分為16等分，可用width切割)  */}
                   <Grid.Row>
                       <Grid.Column width={3}><Mymenu/></Grid.Column>
-                      <Grid.Column width={10}>
+                      <Grid.Column width={(window.screen.width)>'500'?'10':'13'}>
                           <Switch>
                             <Route path='/my/posts' exact><MyPosts/></Route>
                             <Route path='/my/collections' exact ><MyCollections/></Route>
                             <Route path='/my/settings' exact ><MySettings user={user}/></Route>
                           </Switch>
                       </Grid.Column>
-                      <Grid.Column></Grid.Column>
+                        <Grid.Column></Grid.Column>
                   </Grid.Row>
               </Grid>
-          </Container>:<Redirect to='/posts'/>}
+          </Container>:
+          <Redirect to='/posts'/>}
         </Route> 
 
         <Route path='/signin' exact>{user ?<Redirect to='/posts'/>:<Signin/>}</Route>
