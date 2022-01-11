@@ -67,6 +67,10 @@ function Signin(){
         }
     }
 
+    function sleep(delay) {
+        for (var t = Date.now(); Date.now() - t <= delay;);
+    }
+
     return(
         <>
             <Container>
@@ -91,7 +95,7 @@ function Signin(){
 
                 {/* 透過GOOGLE登入或註冊  */}
                 <Form style={{margin:'10px 0'}} onSubmit={GoogleLogin}>
-                    <Form.Button loading={isLoading}>
+                    <Form.Button>
                             <Icon name='google'/>
                             透過 GOOGLE {activeItem==='register' && '註冊'}{activeItem==='signin' && '登入'}
                     </Form.Button>

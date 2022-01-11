@@ -23,7 +23,7 @@ function GoogleLogin(){
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
     });
-    signInWithRedirect(auth, provider);
+    signInWithRedirect('/posts', provider);
 }
 
 export default GoogleLogin

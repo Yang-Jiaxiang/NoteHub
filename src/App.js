@@ -66,7 +66,7 @@ function App() {
           <Redirect to='/posts'/>}
         </Route> 
 
-        <Route path='/signin' exact>{user ?<Redirect to='/posts'/>:<Signin/>}</Route>
+        <Route path='/Signin' exact>{user ?<Redirect to='/posts'/>:<Signin/>}</Route>
 
         
         <Route path='/new-post' exact>{user ?<NewPost/>:<Redirect to='/posts'/>}</Route>
