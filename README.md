@@ -1,5 +1,5 @@
-<H1>NoteHub <H1/>
-<h3>https://notehub-e5514.web.app/ <h3/>
+<H1>NoteHub </H1>
+<h3>https://notehub-e5514.web.app/ </h3>
 -----------------------------------------------------
 <h3>node v16.13.1<br><br>
 react v16.0.0(以上Quill不支援)</h3><br>
