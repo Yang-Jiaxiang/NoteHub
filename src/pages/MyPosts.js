@@ -32,8 +32,8 @@ function MyPosts(){
         <Item.Group>
             {posts.map((post)=>{
                 return(<Post post={post} key={post.id}/>)
-            }
-        )}     
+                }
+            )}     
         </Item.Group></>
     )
 }
