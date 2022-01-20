@@ -6,6 +6,7 @@ react v16.0.0(以上Quill不支援)</h3><br>
 
 GitHub:https://github.com/Yang-Jiaxiang/NoteHub<br>
 Youtube:https://youtu.be/49RQFXbgcdA
+<br> Analytics：https://analytics.google.com/analytics/web/?authuser=1#/p298996999/reports/reportinghub?params=_u..nav%3Dmaui&collectionId=user
 
 1.確保安裝NodeJS、git<br>
 <a href="https://nodejs.org/dist/v16.13.1/node-v16.13.1-x64.msi">點我安裝NodeJS</a><br>
