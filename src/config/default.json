@@ -1,0 +1,9 @@
+{
+    "apiKey": "//add your firebaseSDK",
+    "authDomain": "//add your firebaseSDK",
+    "projectId": "//add your firebaseSDK",
+    "storageBucket": "//add your firebaseSDK",
+    "messagingSenderId": "//add your firebaseSDK",
+    "appId": "//add your firebaseSDK",
+    "measurementId": "//add your firebaseSDK"
+}
