@@ -1,14 +1,14 @@
 import firebase from 'firebase/compat/app';
-
-//firebaseSDK
+const config = require('../config/default.json')
+    //firebaseSDK
 const firebaseConfig = {
-    apiKey: "AIzaSyCorHqO6JFfwjlSEhd_lvE8DYzV9NK3cHY",
-    authDomain: "notehub-e5514.firebaseapp.com",
-    projectId: "notehub-e5514",
-    storageBucket: "notehub-e5514.appspot.com",
-    messagingSenderId: "283179678310",
-    appId: "1:283179678310:web:1032f77fc6eff48a644ba7"
-  };
+    apiKey: config.apiKey,
+    authDomain: config.authDomain,
+    projectId: config.projectId,
+    storageBucket: config.storageBucket,
+    messagingSenderId: config.messagingSenderId,
+    appId: config.appId
+};
 
 firebase.initializeApp(firebaseConfig)
 export default firebase
