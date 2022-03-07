@@ -4,7 +4,7 @@ import './css/Semantic-UI-CSS/semantic.min.css'
 import './css/Quill.css'
 
 ReactDOM.render(
-    <App />,
+    <App />, 
   document.getElementById('root')
 );
 
