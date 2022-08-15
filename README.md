@@ -21,20 +21,21 @@
 ## 4.安裝套件
 ```$npm install```
 
+## 5.configSDK  
+firebaseSDK目錄(src/utils/firebase.js)
 
-## 5.運行
+## 6.運行
 ```$npm start ```
 
-------------------------------------------------------
 
-## 6.編譯完成
+## 7.編譯完成
 ```$npm run build```
 
-## 7.上傳Firebase Hosting
+## 8.上傳Firebase Hosting
 ### build
 ```npm i build```
 ### Firebase Hosting部屬
 ``` firebase deploy --only hosting```
 
-
-firebaseSDK目錄(src/utils/firebase.js)
+## Author  
+[Louis](https://github.com/Yang-Jiaxiang)
