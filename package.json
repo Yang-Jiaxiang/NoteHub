@@ -9,7 +9,7 @@
         "config": "^3.3.7",
         "dotenv": "^16.0.0",
         "firebase": "^9.6.1",
-        "firebase-admin": "^10.0.2",
+        "firebase-admin": "^11.4.1",
         "fs": "^0.0.1-security",
         "path": "^0.12.7",
         "react": "^16.0.0",
